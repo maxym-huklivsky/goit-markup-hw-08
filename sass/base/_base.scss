@@ -2,3 +2,9 @@ body {
 	font-family: $main-font;
 	color: $main-txt-cl;
 }
+
+@media (min-width: 350px) {
+	body {
+		background-color: tomato;
+	}
+}
