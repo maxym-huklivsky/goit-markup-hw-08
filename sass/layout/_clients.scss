@@ -1,0 +1,36 @@
+/* Clients */
+.clients {
+	padding: 94px 0;
+}
+
+.clients__list {
+	display: flex;
+	gap: 30px;
+}
+
+.clients__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 170px;
+	height: 92px;
+
+	border: 1px solid #AFB1B8;
+	border-radius: 4px;
+	transition: border-color $transition;
+
+	&:hover,
+	&:focus {
+		border-color: $accent-cl;
+	}
+}
+
+.clients__icon {
+	fill: #afb1b8;
+	transition: fill $transition;
+
+	.clients__link:hover &,
+	.clients__link:focus & {
+		fill: $accent-cl;
+	}
+}

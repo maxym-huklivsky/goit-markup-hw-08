@@ -1,0 +1,34 @@
+/* Work */
+.work {
+	padding-bottom: 94px;
+}
+
+.work__list {
+	display: flex;
+	gap: 30px;
+}
+
+.work__item {
+	position: relative;
+}
+
+.work__overlay {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: rgb(47, 48, 58, 0.8);
+}
+
+.work__text {
+	font-size: 14px;
+	line-height: calc(16 / 14);
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+}

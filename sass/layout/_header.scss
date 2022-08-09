@@ -1,0 +1,94 @@
+/* Header */
+.header {
+	border-bottom: 1px solid #ECECEC;
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+}
+
+.header__logo {
+	margin-right: 93px;
+}
+
+.logo__wrap-black-color {
+	color: #000000;
+}
+
+.header__list {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.header__item {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+}
+
+.header__link {
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	transition: color $transition;
+
+	&:hover,
+	&:focus {
+		color: $accent-cl;
+	}
+
+	&--current {
+		position: relative;
+
+		color: $accent-cl;
+
+		&::after {
+			position: absolute;
+			bottom: -1px;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 4px;
+
+			background-color: $accent-cl;
+			border-radius: 2px;
+		}
+	}
+}
+
+.contacs {
+	display: flex;
+	margin-left: auto;
+	gap: 50px;
+}
+
+.contacs__link {
+	display: flex;
+	align-items: center;
+
+	color: $secondary-txt-cl;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	transition: color $transition;
+
+	&:hover,
+	&:focus {
+		color: $accent-cl;
+	}
+}
+
+.contacs__icon {
+	margin-right: 10px;
+	fill: currentColor;
+}

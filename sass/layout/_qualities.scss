@@ -1,0 +1,40 @@
+/* Qualities */
+.qualities {
+	padding: 94px 0;
+}
+
+.qualities__container {
+	display: flex;
+	gap: 30px;
+}
+
+.qualities__item {
+	width: 270px;
+}
+
+.qualities__bgc-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 120px;
+	margin-bottom: 30px;
+
+	background-color: $light-bg-cl;
+}
+
+.qualities__title {
+	margin-bottom: 10px;
+
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
+
+.qualities__text {
+	color: $secondary-txt-cl;
+
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+}
