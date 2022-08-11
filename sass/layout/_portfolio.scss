@@ -1,6 +1,10 @@
 /* Portfolio */
 .portfolio {
-	padding: 94px 0;
+	padding: 60px 0;
+
+	@media screen and (min-width: 1200px) {
+		padding: 94px 0;
+	}
 }
 
 .portfolio__title {
@@ -9,11 +13,19 @@
 
 .filter {
 	display: flex;
-	margin-bottom: 50px;
-	justify-content: center;
-	gap: 8px;
-	margin-left: auto;
-	margin-right: auto;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+	row-gap: 15px;
+	column-gap: 8px;
+
+	@media screen and (min-width: 768px) {
+		margin-bottom: 30px;
+		justify-content: center;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
 }
 
 .filter__btn {
@@ -45,6 +57,19 @@
 	gap: 30px;
 }
 
+.galary__item {
+	width: 100%;
+
+	@media screen and (min-width: 768px) {
+		width: 354px;
+		height: 440px;
+	}
+
+	// @media screen and (min-width: 1200px) {
+	// 	padding: 94px 0;
+	// }
+}
+
 .galary__link {
 	display: block;
 
@@ -62,6 +87,20 @@
 	position: relative;
 
 	overflow: hidden;
+}
+
+.gaalry__pic {
+	height: 294px;
+	object-fit: cover;
+
+	@media screen and (min-width: 768px) {
+		width: 354px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 370px;
+	}
+}
 }
 
 .galary__overlay {
@@ -92,6 +131,20 @@
 	border-bottom: 1px solid #EEEEEE;
 	border-left: 1px solid #EEEEEE;
 	border-right: 1px solid #EEEEEE;
+
+	@media screen and (min-width: 768px) {
+		padding: 20px 24px 56px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 20px 24px;
+	}
+}
+
+.galary__wrapper--other {
+	@media screen and (min-width: 768px) {
+		padding: 20px 24px;
+	}
 }
 
 .galary__title {
