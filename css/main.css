@@ -978,9 +978,9 @@ address {
   flex-direction: column;
   gap: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .subscribe-form {
-    width: 450px;
+    max-width: 450px;
     margin: 0 auto;
   }
 }
@@ -988,8 +988,6 @@ address {
   .subscribe-form {
     flex-direction: row;
     margin-left: auto;
-    margin-right: 0;
-    width: auto;
     gap: 12px;
   }
 }
