@@ -17,6 +17,9 @@ body {
   font-family: "Roboto", sans-serif;
   color: #212121;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 ul,
 ol {
@@ -37,8 +40,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 a {
@@ -113,6 +116,96 @@ address {
   .logo {
     font-size: 26px;
   }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu__button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: transparent;
+}
+
+.mobile-menu__icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu__button:hover .mobile-menu__icon, .menu__button:focus .mobile-menu__icon {
+  fill: #2196F3;
+}
+
+.mobile-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-nav__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+}
+.mobile-nav__link--current {
+  color: #2196F3;
+}
+
+.mobile-menu__tel {
+  display: block;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mobile-menu__mail {
+  display: block;
+  margin-bottom: 64px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-sociales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mobile-sociales__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-sociales__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1, 22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
 }
 
 /* Модальне вікно */
@@ -419,23 +512,57 @@ address {
 .header {
   border-bottom: 1px solid #ECECEC;
 }
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 10px 0;
+  }
+}
 
-.header__container {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__nav {
   display: flex;
   align-items: center;
 }
-
-.header__logo {
-  margin-right: 5px;
+@media screen and (max-width: 767px) {
+  .header__nav {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    gap: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__nav {
+    gap: 93px;
+  }
 }
 
 .logo__wrap-black-color {
   color: #000000;
+}
+
+.header__button {
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .header__button {
+    display: none;
+  }
+}
+
+.header__icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header__button:hover .header__icon, .header__button:focus .header__icon {
+  fill: #2196F3;
 }
 
 .header__list {
@@ -443,12 +570,10 @@ address {
   align-items: center;
   gap: 50px;
 }
-
-.header__item {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+@media screen and (max-width: 767px) {
+  .header__list {
+    display: none;
+  }
 }
 
 .header__link {
@@ -456,6 +581,10 @@ address {
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 .header__link:hover, .header__link:focus {
   color: #2196F3;
@@ -477,8 +606,20 @@ address {
 
 .contacs {
   display: flex;
+  flex-direction: column;
   margin-left: auto;
-  gap: 50px;
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .contacs {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacs {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .contacs__link {
@@ -486,18 +627,29 @@ address {
   align-items: center;
   color: #757575;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacs__link:hover, .contacs__link:focus {
   color: #2196F3;
 }
+@media screen and (min-width: 1200px) {
+  .contacs__link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
+}
 
 .contacs__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+}
+@media screen and (min-width: 1200px) {
+  .contacs__icon {
+    margin-right: 10px;
+  }
 }
 
 /* Hero */

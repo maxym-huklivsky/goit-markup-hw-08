@@ -1,46 +1,77 @@
 /* Header */
 .header {
 	border-bottom: 1px solid #ECECEC;
+
+	@media screen and (max-width:767px) {
+		padding: 10px 0;
+	}
 }
 
 .header__container {
-	display: flex;
-	align-items: center;
+	@media screen and (min-width:768px) {
+		display: flex;
+		align-items: center;
+	}
 }
 
 .header__nav {
 	display: flex;
 	align-items: center;
-}
 
-.header__logo {
-	// margin-right: 93px;
-	margin-right: 5px;
+	@media screen and (max-width:767px) {
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width:768px) {
+		gap: 88px;
+	}
+
+	@media screen and (min-width:1200px) {
+		gap: 93px;
+	}
 }
 
 .logo__wrap-black-color {
 	color: #000000;
 }
 
+.header__button {
+	background-color: transparent;
+
+	@media screen and(min-width:768px) {
+		display: none;
+	}
+}
+
+.header__icon {
+	transition: fill $transition;
+
+	.header__button:hover &,
+	.header__button:focus & {
+		fill: $accent-cl;
+	}
+}
+
 .header__list {
 	display: flex;
 	align-items: center;
 	gap: 50px;
-}
 
-.header__item {
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
+	@media screen and(max-width:767px) {
+		display: none;
+	}
 }
 
 .header__link {
 	display: block;
 	padding-top: 32px;
 	padding-bottom: 32px;
-
 	transition: color $transition;
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
 
 	&:hover,
 	&:focus {
@@ -68,8 +99,18 @@
 
 .contacs {
 	display: flex;
+	flex-direction: column;
 	margin-left: auto;
-	gap: 50px;
+	gap: 10px;
+
+	@media screen and(max-width:767px) {
+		display: none;
+	}
+
+	@media screen and(min-width:1200px) {
+		flex-direction: row;
+		gap: 30px;
+	}
 }
 
 .contacs__link {
@@ -78,8 +119,8 @@
 
 	color: $secondary-txt-cl;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
+	font-size: 12px;
+	line-height: calc(14/12);
 	letter-spacing: 0.02em;
 	transition: color $transition;
 
@@ -87,9 +128,18 @@
 	&:focus {
 		color: $accent-cl;
 	}
+
+	@media screen and(min-width:1200px) {
+		font-size: 14px;
+		line-height: calc(16/14);
+	}
 }
 
 .contacs__icon {
-	margin-right: 10px;
+	margin-right: 8px;
 	fill: currentColor;
+
+	@media screen and(min-width:1200px) {
+		margin-right: 10px;
+	}
 }
