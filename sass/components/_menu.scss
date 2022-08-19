@@ -42,13 +42,13 @@
 
 .mobile-nav__item {
 	&:not(:last-child) {
-		margin-bottom: 32px;
+		margin-bottom: 22px;
 	}
 }
 
 .mobile-nav__link {
 	font-weight: 500;
-	font-size: 40px;
+	font-size: 34px;
 	line-height: calc(47 / 40);
 	letter-spacing: 0.02em;
 
@@ -59,10 +59,10 @@
 
 .mobile-menu__tel {
 	display: block;
-	margin-bottom: 32px;
+	margin-bottom: 22px;
 
 	font-weight: 500;
-	font-size: 34px;
+	font-size: 26px;
 	line-height: calc(40 / 34);
 	letter-spacing: 0.02em;
 	color: $accent-cl;
@@ -70,10 +70,10 @@
 
 .mobile-menu__mail {
 	display: block;
-	margin-bottom: 64px;
+	margin-bottom: 32px;
 
 	font-weight: 500;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: calc(28 / 24);
 	letter-spacing: 0.02em;
 	color: $secondary-txt-cl;

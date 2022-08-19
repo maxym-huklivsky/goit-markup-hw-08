@@ -160,12 +160,12 @@ address {
 }
 
 .mobile-nav__item:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 22px;
 }
 
 .mobile-nav__link {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 34px;
   line-height: 1.175;
   letter-spacing: 0.02em;
 }
@@ -175,9 +175,9 @@ address {
 
 .mobile-menu__tel {
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 26px;
   line-height: 1.1764705882;
   letter-spacing: 0.02em;
   color: #2196F3;
@@ -185,9 +185,9 @@ address {
 
 .mobile-menu__mail {
   display: block;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.1666666667;
   letter-spacing: 0.02em;
   color: #757575;
