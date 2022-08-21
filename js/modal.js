@@ -9,6 +9,7 @@
 	refs.closeModalBtn.addEventListener("click", toggleModal);
 
 	function toggleModal() {
+		document.body.classList.toggle('no-scroll-modal');
 		refs.modal.classList.toggle("backdrop--is-hidden");
 	}
 })();

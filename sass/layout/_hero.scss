@@ -5,7 +5,7 @@
 	margin-right: auto;
 
 	background-position: center;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@1x_mb.jpg);
 
@@ -19,10 +19,6 @@
 	(min-resolution: 288dpi),
 	(min-resolution: 3dppx) {
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@3x_mb.jpg);
-	}
-
-	@media screen and (max-width:479px) {
-		background-size: cover;
 	}
 
 	@media screen and (min-width:768px) {
