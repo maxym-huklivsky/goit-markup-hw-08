@@ -226,18 +226,38 @@ address {
   flex-wrap: wrap;
   gap: 10px;
 }
+@media screen and (max-width: 479px) {
+  .mobile-sociales {
+    gap: 5px;
+  }
+}
 
 .mobile-sociales__item:not(:last-child) {
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
+@media screen and (max-width: 479px) {
+  .mobile-sociales__item:not(:last-child) {
+    padding-right: 5px;
+  }
+}
 
 .mobile-sociales__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1, 22;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+@media screen and (min-width: 360px) {
+  .mobile-sociales__link {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .mobile-sociales__link {
+    font-size: 18px;
+  }
 }
 
 /* Модальне вікно */
@@ -705,6 +725,7 @@ address {
 
 /* Hero */
 .hero {
+  max-width: 1600px;
   padding: 118px 0;
   margin-left: auto;
   margin-right: auto;
@@ -1110,18 +1131,13 @@ address {
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .galary__wrapper {
     padding-bottom: 56px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .galary__wrapper--other {
-    padding-bottom: 20px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .galary__wrapper {
     padding-bottom: 20px;
   }
 }

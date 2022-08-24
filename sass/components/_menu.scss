@@ -104,19 +104,35 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
+
+	@media screen and(max-width:479px) {
+		gap: 5px;
+	}
 }
 
 .mobile-sociales__item {
 	&:not(:last-child) {
 		padding-right: 10px;
 		border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+		@media screen and(max-width:479px) {
+			padding-right: 5px;
+		}
 	}
 }
 
 .mobile-sociales__link {
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 12px;
 	line-height: 1, 22;
 	letter-spacing: 0.02em;
 	color: $accent-cl;
+
+	@media screen and(min-width:360px) {
+		font-size: 14px;
+	}
+
+	@media screen and(min-width:480px) {
+		font-size: 18px;
+	}
 }
