@@ -1,14 +1,10 @@
 body {
-	font-family: $main-font;
-	color: $main-txt-cl;
+  font-family: $main-font;
+  color: $main-txt-cl;
 
-	&.no-scroll-menu {
-		@media screen and (max-width:767px) {
-			overflow: hidden;
-		}
-	}
-
-	&.no-scroll-modal {
-		overflow: hidden;
-	}
+  &.no-scroll-menu {
+    @media screen and (max-width: 767px) {
+      overflow: hidden;
+    }
+  }
 }
